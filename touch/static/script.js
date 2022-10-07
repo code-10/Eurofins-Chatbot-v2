@@ -35,7 +35,9 @@ class Chatbox {
 
         // show or hides the box
         if(this.state) {
-            chatbox.classList.add('chatbox--active')
+            chatbox.classList.add('chatbox--active');
+			var audio = new Audio('../static/images/pop.mp3');
+            audio.play();
         } else {
             chatbox.classList.remove('chatbox--active')
         }
