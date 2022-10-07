@@ -97,7 +97,7 @@
 	{
       "tag": "ipw default printer error",
       "patterns": [
-		"ipw default printer error",
+	"ipw default printer error",
         "Invoices cannot be printed"
       ],
       "responses": [
