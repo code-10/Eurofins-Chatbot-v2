@@ -15,8 +15,6 @@ class Chatbox {
         const {openButton, chatBox, sendButton} = this.args;
 
         this.toggleState(chatBox)
-        var audio = new Audio('../static/images/pop.mp3');
-        audio.play();
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
@@ -33,11 +31,12 @@ class Chatbox {
     toggleState(chatbox) {
         this.state = !this.state;
 
+		var audio = new Audio('../static/images/pop.mp3');
+		audio.play();
+
         // show or hides the box
         if(this.state) {
             chatbox.classList.add('chatbox--active');
-			var audio = new Audio('../static/images/pop.mp3');
-            audio.play();
         } else {
             chatbox.classList.remove('chatbox--active')
         }
