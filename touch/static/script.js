@@ -153,22 +153,6 @@ const chatbox = new Chatbox();
 chatbox.display();
 
 //loading
-function onReady(callback) {
-    var intervalId = window.setInterval(function() {
-      if (document.getElementsByTagName('body')[0] !== undefined) {
-        window.clearInterval(intervalId);
-        callback.call(this);
-      }
-    }, 1000);
-  }
-  
-  function setVisible(selector, visible) {
-    document.querySelector(selector).style.display = visible ? 'block' : 'none';
-  }
-  
-  onReady(function() {
-    setVisible('.page', true);
-    setVisible('#loading', false);
-  });
+window.onload = function(){ document.getElementById("loader").style.display = "none" }
 
 //Visitor is Bot, Operator is User
