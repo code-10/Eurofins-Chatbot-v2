@@ -15,7 +15,7 @@ class Chatbox {
         const {openButton, chatBox, sendButton} = this.args;
 
         this.toggleState(chatBox)
-        var audio = new sound('../static/images/pop.mp3');
+        var audio = new Audio('../static/images/pop.mp3');
         audio.play();
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
