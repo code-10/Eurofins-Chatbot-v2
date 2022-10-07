@@ -95,10 +95,10 @@
       ]
     },
 	{
-      "tag": "ipw printer error",
+      "tag": "ipw default printer error",
       "patterns": [
-        "Invoices cannot be printed",
-		"ipw default printer error"
+		"ipw default printer error",
+        "Invoices cannot be printed"
       ],
       "responses": [
         "While configuring the default printer for a user, it must be ensured that only one printer is set to isDefault = true for a workstation."
