@@ -93,6 +93,16 @@
       "responses": [
         "Please Check with SAM team is to why AdditionalFieldCode value is set to empty"
       ]
+    },
+	{
+      "tag": "ipw printer error",
+      "patterns": [
+        "Invoices cannot be printed",
+		"ipw default printer error"
+      ],
+      "responses": [
+        "While configuring the default printer for a user, it must be ensured that only one printer is set to “isDefault = true” for a workstation."
+      ]
     }
   ]
 }
