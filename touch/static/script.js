@@ -61,7 +61,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch('http://localhost:8000/predict', {
+        fetch('https://ava-eurofins.herokuapp.com/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -87,7 +87,7 @@ class Chatbox {
         console.log('option clicked',domain);
         document.querySelectorAll('.optionButton').forEach(el => el.setAttribute('disabled', true));
 
-        fetch('http://localhost:8000/domain', {
+        fetch('https://ava-eurofins.herokuapp.com/domain', {
             method: 'POST',
             body: JSON.stringify({ message: domain }),
             mode: 'cors',
