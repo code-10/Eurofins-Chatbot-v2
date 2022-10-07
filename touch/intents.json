@@ -101,7 +101,7 @@
 		"ipw default printer error"
       ],
       "responses": [
-        "While configuring the default printer for a user, it must be ensured that only one printer is set to “isDefault = true” for a workstation."
+        "While configuring the default printer for a user, it must be ensured that only one printer is set to isDefault = true for a workstation."
       ]
     }
   ]
