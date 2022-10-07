@@ -35,8 +35,8 @@ class Chatbox {
 
         // show or hides the box
         if(this.state) {
-            chatbox.classList.add('chatbox--active');
-			var audio = new Audio('../static/images/pop.mp3');
+            chatbox.classList.add('chatbox--active')
+            var audio = new Audio('../static/images/pop.mp3');
             audio.play();
         } else {
             chatbox.classList.remove('chatbox--active')
@@ -63,7 +63,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch('https://ava-eurofins.herokuapp.com/predict', {
+        fetch('http://localhost:8000/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -89,7 +89,7 @@ class Chatbox {
         console.log('option clicked',domain);
         document.querySelectorAll('.optionButton').forEach(el => el.setAttribute('disabled', true));
 
-        fetch('https://ava-eurofins.herokuapp.com/domain', {
+        fetch('http://localhost:8000/domain', {
             method: 'POST',
             body: JSON.stringify({ message: domain }),
             mode: 'cors',
@@ -151,5 +151,24 @@ function optionClicked(domain){
 
 const chatbox = new Chatbox();
 chatbox.display();
+
+//loading
+function onReady(callback) {
+    var intervalId = window.setInterval(function() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 1000);
+  }
+  
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  }
+  
+  onReady(function() {
+    setVisible('.page', true);
+    setVisible('#loading', false);
+  });
 
 //Visitor is Bot, Operator is User
