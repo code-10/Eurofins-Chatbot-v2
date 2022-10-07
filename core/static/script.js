@@ -152,7 +152,10 @@ function optionClicked(domain){
 const chatbox = new Chatbox();
 chatbox.display();
 
-//loading
-window.onload = function(){ document.getElementById("loader").style.display = "none" }
+//Loading
+window.onload = function(){ 
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loadbackground").style.display="none";
+ }
 
 //Visitor is Bot, Operator is User
